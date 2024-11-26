@@ -48,7 +48,7 @@ function saveImageAndDescription(imageUrl, description, pageUrl) {
   });
 
   // 添加服務器存儲邏輯，包含 sourceUrl
-  fetch('https://6dfa5122.tw.cpolar.io/upload', {
+  fetch('https://6549dd43.tw.cpolar.io/upload', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

@@ -30,7 +30,7 @@ function loadImages() {
   imageContainer.innerHTML = ''; // 清空現有內容
   
   // 從服務器獲取數據
-  fetch('https://6dfa5122.tw.cpolar.io/data')
+  fetch('https://6549dd43.tw.cpolar.io/data')
     .then(response => response.json())
     .then(serverImages => {
       // 從 Chrome storage 獲取數據
@@ -92,7 +92,7 @@ function clearAllImages() {
     chrome.storage.local.set({ images: [] });
     
     // 清除服務器數據（需要在 Flask 服務器添加對應的路由）
-    fetch('http://localhost:5000/clear', {
+    fetch('https://6549dd43.tw.cpolar.io/clear', {
       method: 'POST'
     }).catch(error => console.error('Error clearing server data:', error));
     
@@ -110,7 +110,7 @@ function deleteImage(url) {
   });
   
   // 從服務器刪除（需要在 Flask 服務器添加對應的路由）
-  fetch('http://localhost:5000/delete', {
+  fetch('https://6549dd43.tw.cpolar.io/delete', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
